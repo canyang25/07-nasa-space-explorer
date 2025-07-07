@@ -1,4 +1,3 @@
-
 // NOTE: You do not need to edit this file.
 
 // NASA's APOD API only has images from June 16, 1995 onwards
@@ -20,11 +19,6 @@ function setupDateInputs(startInput, endInput) {
   startInput.value = lastWeek.toISOString().split('T')[0];
   endInput.value = today;
 
-  // Automatically adjust end date to show exactly 9 days of images
-  startInput.addEventListener('change', () => {
-    const startDate = new Date(startInput.value);
-    const endDate = new Date(startDate);
-    endDate.setDate(startDate.getDate() + 8);
-    endInput.value = endDate > new Date(today) ? today : endDate.toISOString().split('T')[0];
-  });
+  // Allow users to freely pick any end date (no auto-update)
+  // (No event listener on startInput to change endInput)
 }
