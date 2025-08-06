@@ -2,8 +2,6 @@
 const startInput = document.getElementById('startDate');
 const endInput = document.getElementById('endDate');
 
-// Add your NASA API key here
-const NASA_API_KEY = 'Lt2TtkTWy5cV24iRmZvFFbd8YDL9xdGvQhciAkbT'; // Replace with your actual API key
 
 // Call the setupDateInputs function from dateRange.js
 // This sets up the date pickers to:
@@ -60,7 +58,7 @@ getImagesButton.addEventListener('click', function () {
     return;
   }
 
-  const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}&start_date=${startDate}&end_date=${endDate}`;
+  const url = `/api/nasa-images?start_date=${startDate}&end_date=${endDate}`;
 
   // Use async/await to fetch data from NASA API
   async function fetchImages() {
