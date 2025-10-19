@@ -1,11 +1,41 @@
-# Project 7: NASA API - Space Explorer App
-NASA releases a new "Astronomy Picture of the Day" (APOD) every day—spotlighting breathtaking images of galaxies, stars, planets, and more.
+# NASA Space Explorer
 
-Your task is to build an interactive web app that fetches and displays these photos using [NASA's API](https://api.nasa.gov/). Users will pick a date range and instantly view stunning photos from across the cosmos, along with titles and descriptions.
+An interactive web application that displays NASA’s Astronomy Picture of the Day (APOD) using the official NASA API.  
+Users can select a custom date range to explore daily images, titles, and descriptions from NASA’s archive.
 
-You'll get to use your skills to build something that's actually connected to real-world data from one of the most iconic organizations in the world.
+---
 
-## Starter Files
-- The provided files include a NASA logo, date inputs, a button, a placeholder for your gallery, and basic layout and styling to help you get started.
-- It also includes built-in logic (in `dateRange.js`) to handle the valid APOD date range—from June 16, 1995 to today. No need to modify it.
-- All your custom JavaScript should go in `script.js`. That's where you'll write the code that fetches data and displays your gallery.
+## Features
+
+- Fetches real-time data from the **NASA APOD API**
+- Supports **custom date range queries**
+- Displays images, titles, and detailed descriptions
+- Built-in **backend server** for API key protection and caching
+- Responsive design optimized for desktop and mobile
+
+---
+
+## Tech Stack
+
+- **Frontend:** HTML5, CSS3, JavaScript (ES6)  
+- **Backend:** Node.js with Express  
+- **API:** NASA Astronomy Picture of the Day (APOD)  
+- **Environment Management:** `.env` for API key storage  
+
+---
+
+## Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/07-nasa-space-explorer.git
+cd 07-nasa-space-explorer
+
+# Install dependencies
+npm install
+
+# Create a .env file and add your NASA API key
+echo "API_KEY=your_nasa_api_key" > .env
+
+# Start the server
+node server.js
