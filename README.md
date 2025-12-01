@@ -1,4 +1,4 @@
-# NASA Space Explorer
+# NASA-apod-service
 
 An interactive web application that displays NASA’s Astronomy Picture of the Day (APOD) using the official NASA API.  
 Users can select a custom date range to explore daily images, titles, and descriptions from NASA’s archive.
